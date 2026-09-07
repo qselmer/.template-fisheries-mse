@@ -1,11 +1,26 @@
 name: repository-check
-on: [push, pull_request]
+
+on:
+  push:
+  pull_request:
+
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python scripts/00_setup/repo_check.py
+
+      - name: Dependencies
+        run: python -m pip install --disable-pip-version-check pyyaml
+
+      - name: Repository structure and metadata
+        run: python scripts/00_setup/repo_check.py
+
+      - name: Python syntax
+        run: python -m compileall -q scripts src
