@@ -1,9 +1,10 @@
 cff-version: 1.2.0
 message: "Si utiliza o adapta este template, cite esta versión y el producto técnico o científico resultante cuando corresponda."
-title: "Evaluación de Estrategias de Manejo (MSE) para pesquerías"
+title: "Fisheries MSE Template"
 type: software
 version: 1.0.0
 date-released: 2026-09-07
+license: MIT
 authors:
   - family-names: "Quispe-Salazar"
     given-names: "Elmer"
