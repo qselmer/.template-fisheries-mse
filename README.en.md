@@ -12,4 +12,4 @@ The main documentation is written in Spanish. Start with [`README.md`](README.md
 
 The template covers management objectives, evidence and data, Operating Models, observation and estimation, Management Procedures, implementation, performance metrics, uncertainty, simulation design, monitoring, exceptional circumstances, reporting, and certification.
 
-**Template version: 1.0.3 - 2026-09-02.**
+**Template version: 1.0.0.**
