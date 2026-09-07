@@ -1,0 +1,14 @@
+schema_version: 1
+template:
+  owner: qselmer
+  repository: .template-fisheries-mse
+  type: type-template
+  produces: type-workflow
+  version: 1.0.0
+  language: es
+  domain:
+    - fisheries
+    - management-strategy-evaluation
+  description: "Estructura reutilizable para proyectos reproducibles de Evaluación de Estrategias de Manejo en pesquerías."
+  branding:
+    logo: assets/logo_hex_mse.svg
