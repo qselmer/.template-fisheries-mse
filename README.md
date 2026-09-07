@@ -31,6 +31,8 @@ Los archivos visibles en la pantalla principal de GitHub cumplen funciones difer
 | [`REPOSITORY_MAP.md`](REPOSITORY_MAP.md) | Mapa navegable de carpetas y subcarpetas. |
 | [`GLOSSARY.md`](GLOSSARY.md) | Glosario de términos de MSE y del repositorio. |
 | [`TEMPLATE_USAGE.md`](TEMPLATE_USAGE.md) | Guía práctica para crear un proyecto a partir de este template. |
+| [`template.yml`](template.yml) | Metadatos del template y del tipo de repositorio que genera. |
+| [`repo.yml`](repo.yml) | Metadatos base que debe heredar un proyecto MSE creado desde el template. |
 | [`species_profile.yml`](species_profile.yml) | Ficha general del caso: especie, stock, región, instituciones y decisiones básicas de escala. |
 | [`publication.yml`](publication.yml) | Define niveles de visibilidad y ayuda a distinguir contenido público, interno y restringido. |
 | [`PROJECT_CHARTER.md`](PROJECT_CHARTER.md) | Resume el propósito, alcance y principios generales del proyecto. |
