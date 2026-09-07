@@ -1,6 +1,6 @@
 <img align="right" src="assets/logo_hex_mse.svg" alt="Logo de Evaluación de Estrategias de Manejo" width="110">
 
-# Evaluación de Estrategias de Manejo (MSE) para pesquerías
+# Fisheries MSE<br>Template
 
 <br clear="right">
 
@@ -42,6 +42,8 @@ Los archivos visibles en la pantalla principal de GitHub cumplen funciones difer
 | [`SECURITY.md`](SECURITY.md) | Resume las reglas para proteger credenciales e información sensible. |
 | [`CHANGELOG.md`](CHANGELOG.md) | Registra los cambios relevantes entre versiones del template. |
 | [`CITATION.cff`](CITATION.cff) | Metadatos para facilitar la citación del repositorio. |
+| [`LICENSE`](LICENSE) | Licencia MIT para código, scripts y componentes de software. |
+| [`LICENSE-DOCS.md`](LICENSE-DOCS.md) | Licencia CC BY 4.0 para documentación, texto y figuras originales. |
 | [`VERSION`](VERSION) | Indica la versión actual del template. |
 | [`Makefile`](Makefile) | Contiene atajos opcionales para ejecutar verificaciones y tareas repetitivas. |
 
@@ -101,3 +103,11 @@ Los campos `TBD` significan **por definir con evidencia o mediante una decisión
 ## Datos públicos, internos y restringidos
 
 El template distingue información `public`, `derived_public`, `internal` y `restricted`. `data/raw_private/` y `local_private/` están destinados a información que no debe entrar al historial de Git. Consulte [`DATA_POLICY.md`](DATA_POLICY.md) y [`publication.yml`](publication.yml).
+
+## Licencias
+
+El **código, scripts y componentes de software** se distribuyen bajo la licencia [MIT](LICENSE).
+
+La **documentación, texto explicativo y figuras originales** se distribuyen bajo [CC BY 4.0](LICENSE-DOCS.md), salvo indicación expresa en un archivo concreto.
+
+Los datos no quedan licenciados automáticamente por estas condiciones. Cada conjunto de datos debe conservar sus propias restricciones de acceso, uso y redistribución.
