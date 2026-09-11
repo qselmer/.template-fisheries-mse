@@ -114,7 +114,8 @@ Los directorios `tests/unit`, `tests/integration`, `tests/regression` y `tests/s
 
 **Versión:** `1.0.0`  
 **Tipo:** `type-template`  
-**Estado:** stable  
+**Estado:** `active`  
+**Etapa:** `stable`  
 **Producto por defecto:** `type-project`  
 **Idioma principal:** español
 
