@@ -1,21 +1,31 @@
 schema_version: 2
+
 repository:
   owner: qselmer
-  name: REPO_NAME
-  title: PROJECT_TITLE
-  type: type-workflow
-  status: active
+  name: .template-mse
+  title: Fisheries MSE Template
+  type: type-template
+  status: stable
   visibility: public
-  description: "SHORT_DESCRIPTION"
-  template_source: qselmer/.template-fisheries-mse
+  version: 1.0.0
+  language: es
+  description: >
+    Reusable template for reproducible fisheries Management Strategy Evaluation
+    projects, including governance, data, operating models, management
+    procedures, simulation, validation, reporting, and certification.
   topics:
-    - type-workflow
-    - management-strategy-evaluation
+    - type-template
     - fisheries
+    - management-strategy-evaluation
+    - stock-assessment
     - reproducible-research
   branding:
     logo: assets/logo_hex_mse.svg
+
 integration:
   profile:
     include: true
-  repository_url: "https://github.com/qselmer/REPO_NAME"
+  website:
+    include: true
+    section: software
+  repository_url: https://github.com/qselmer/.template-mse
