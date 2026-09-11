@@ -5,20 +5,18 @@ repository:
   name: .template-mse
   title: Fisheries MSE Template
   type: type-template
-  status: stable
+  status: active
+  stage: stable
   visibility: public
   version: 1.0.0
   language: es
   description: >
-    Reusable template for reproducible fisheries Management Strategy Evaluation
-    projects, including governance, data, operating models, management
-    procedures, simulation, validation, reporting, and certification.
+    Reusable structure for reproducible fisheries Management Strategy Evaluation projects.
   topics:
     - type-template
     - fisheries
-    - management-strategy-evaluation
+    - mse
     - stock-assessment
-    - reproducible-research
   branding:
     logo: assets/logo_hex_mse.svg
 
