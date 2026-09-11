@@ -56,8 +56,9 @@ def load_yaml(relative_path):
 if (root / 'template.yml').exists():
     meta = load_yaml('template.yml').get('template', {})
     expected = {
+        'repository': '.template-mse',
         'type': 'type-template',
-        'produces': 'type-workflow',
+        'produces': 'type-project',
         'version': '1.0.0',
         'language': 'es',
     }
@@ -67,10 +68,22 @@ if (root / 'template.yml').exists():
 
 if (root / 'repo.yml').exists():
     repo = load_yaml('repo.yml').get('repository', {})
-    if repo.get('type') != 'type-workflow':
-        errors.append("repo.yml: repository.type debe ser 'type-workflow'")
-    if repo.get('template_source') != 'qselmer/.template-fisheries-mse':
-        errors.append('repo.yml: template_source no coincide con el template')
+    expected = {
+        'owner': 'qselmer',
+        'name': '.template-mse',
+        'type': 'type-template',
+        'status': 'stable',
+        'visibility': 'public',
+        'version': '1.0.0',
+    }
+    for key, value in expected.items():
+        if str(repo.get(key)) != value:
+            errors.append(f'repo.yml: repository.{key} debe ser {value!r}')
+
+    topics = repo.get('topics', []) or []
+    type_topics = [topic for topic in topics if str(topic).startswith('type-')]
+    if type_topics != ['type-template']:
+        errors.append("repo.yml: debe existir exactamente un topic 'type-template'")
 
 version_file = root / 'VERSION'
 if version_file.exists() and version_file.read_text(encoding='utf-8').strip() != '1.0.0':
