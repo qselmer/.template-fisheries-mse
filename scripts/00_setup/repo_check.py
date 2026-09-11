@@ -67,12 +67,17 @@ if (root / 'template.yml').exists():
             errors.append(f'template.yml: {key} debe ser {value!r}')
 
 if (root / 'repo.yml').exists():
-    repo = load_yaml('repo.yml').get('repository', {})
+    contract = load_yaml('repo.yml')
+    if contract.get('schema_version') != 2:
+        errors.append('repo.yml: schema_version debe ser 2')
+
+    repo = contract.get('repository', {})
     expected = {
         'owner': 'qselmer',
         'name': '.template-mse',
         'type': 'type-template',
-        'status': 'stable',
+        'status': 'active',
+        'stage': 'stable',
         'visibility': 'public',
         'version': '1.0.0',
     }
@@ -84,6 +89,15 @@ if (root / 'repo.yml').exists():
     type_topics = [topic for topic in topics if str(topic).startswith('type-')]
     if type_topics != ['type-template']:
         errors.append("repo.yml: debe existir exactamente un topic 'type-template'")
+
+    integration = contract.get('integration', {}) or {}
+    profile = integration.get('profile', {}) or {}
+    if profile.get('include') is not True:
+        errors.append('repo.yml: integration.profile.include debe ser true')
+
+    expected_url = 'https://github.com/qselmer/.template-mse'
+    if integration.get('repository_url') != expected_url:
+        errors.append(f'repo.yml: integration.repository_url debe ser {expected_url!r}')
 
 version_file = root / 'VERSION'
 if version_file.exists() and version_file.read_text(encoding='utf-8').strip() != '1.0.0':
