@@ -9,4 +9,5 @@ authors:
   - family-names: "Quispe-Salazar"
     given-names: "Elmer"
     orcid: "https://orcid.org/0000-0001-9229-6379"
-repository-code: "https://github.com/qselmer/.template-fisheries-mse"
+repository-code: "https://github.com/qselmer/.template-mse"
+url: "https://github.com/qselmer/.template-mse"
